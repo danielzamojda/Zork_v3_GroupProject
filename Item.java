@@ -103,7 +103,14 @@ public class Item {
       @author Daniel Zamojda
       @author Brendon Kertcher
     */
-    public String disappear(){ return null; }
+    public String disappear(){
+        Dungeon theDungeon = GameState.instance().getDungeon();
+        theDungeon.removeItem(this.getPrimaryName);
+        
+        String output = "This item has disappeared from the Dugeon forever...";
+        System.out.println(output);
+        return "";
+    }
     
     /*This method returns a string indicating what item has replaced the item the method
       was called on. The hashtable's value of the key will be the name of the
