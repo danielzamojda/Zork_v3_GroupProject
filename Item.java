@@ -113,7 +113,16 @@ public class Item {
       @author Daniel Zamojda
       @author Brendon Kertcher
     */
-    public String transform(String newItemName){ return null; }
+    public String transform(String newItemName){
+        Dungeon theDungeon = GameState.instance().getDungeon();
+        Item newItem = theDungeon.getItem(newItemName);
+        theDungeon.addToInventory(newItem);
+        theDungeon.removeFromInventory(this);
+        
+        String output = "This item has now transformed into " + newItemName + "\n";
+        System.out.println(output);
+        return "";
+    }
     
     /*Finally, the teleport method will return a String letting the adventurer know they
       have teleported. The String value in the hashtable will include the name of the room
