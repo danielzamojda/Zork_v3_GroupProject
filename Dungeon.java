@@ -180,4 +180,12 @@ public class Dungeon {
         }
         return items.get(primaryItemName);
     }
+    
+    public void deleteItem(String primaryItemName) throws Item.NoItemException{
+        
+        if(items.remove(primaryItemName) == null){
+            throw new Item.NoException();
+        }
+        items.remove(primaryItemName);
+    }
 }
