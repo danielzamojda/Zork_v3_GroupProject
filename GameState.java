@@ -64,6 +64,10 @@ public class GameState {
     */
     Hashtable<Integer,String> adventurerRank = new Hashtable<>();
     
+    /**
+    *Needed a variable to store the direction a player must go back to in when entering a dark room.
+    */
+    private String mustGoBack;
     
     static synchronized GameState instance() {
         if (theInstance == null) {
@@ -362,6 +366,18 @@ public class GameState {
     public void setScore(int b){
         score += b;
     }
-
+    public String goBack(){
+        return mustGoBack;
+    }
+    public void setGoBack(String dir){
+        switch (dir){
+            case 's': mustGoBack = "n";
+            case 'n': mustGoBack = "s";
+            case 'w': mustGoBack = "e";
+            case 'e': mustGoBack = "w";
+            case 'u': mustGoBack = "d";
+            case 'd': mustGoBack = "u";
+        }       
+    }
 
 }
