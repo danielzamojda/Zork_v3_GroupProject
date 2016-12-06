@@ -96,4 +96,11 @@ public class Exit {
     * the exit's boolean status.
     */
     String isLocked() { return null; }
+    public void setLock(boolean b){
+        if (b){
+            isLocked = true;
+        else{
+            islocked = false;
+        }
+    }
 }
