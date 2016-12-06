@@ -96,4 +96,6 @@ public class Exit {
     * the exit's boolean status.
     */
     String isLocked() { return null; }
+    
+    public Item getKey() { return key; }
 }
