@@ -18,6 +18,7 @@ public class Room {
     private ArrayList<Exit> exits;
 
     /**
+     *
     *An arraylist of the NPCs that are in the room
     *@author Daniel Zamojda
     */
