@@ -163,11 +163,13 @@ public class Room {
             if (contents.size() > 0) {
                 description += "\n";
             }
+            /*   *****VERY ANNOYING WHEN WE CAN'T SEE WHERE YOU ARE GOING******
             if (!beenHere) {
                 for (Exit exit : exits) {
                     description += "\n" + exit.describe();
                 }
             }
+            */
             beenHere = true;
             return description;
         }
