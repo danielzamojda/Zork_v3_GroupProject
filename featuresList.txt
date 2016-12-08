@@ -13,7 +13,9 @@ Features:
 	- To test item weight, start in rotunda and enter 'd' to go to Basemend Hallway and pick up the DrPepper and Key there.
 	enter 's' to go into B13 and take the bomb. Talk to the wizard by typing 'Get me out of here' for him to teleport you to
 	a random room. At this point you have the heaviest item in the dungeon. Find your way to B6 and take the torch. Go 'u' to
-	Rotunda Balcony and take the chainsaw. At this point you will not be able to take the magicWand. 
+	Rotunda Balcony and take the chainsaw. At this point you will not be able to take it. Drop the Bomb and then
+	take the chainsaw. At anytime you may drop and then pick up an item and check the differences between inventory weights by
+	using the 'weight' command to check the current inventory weight.
 	
 	
 3. Dark and Locked rooms
