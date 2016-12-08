@@ -8,6 +8,8 @@ class TakeCommand extends Command {
     }
 
     public String execute() {
+
+        int MAXWEIGHT = GameState.maxWeight;
         if (GameState.instance().getAdventurersCurrentRoom().isDark() &&
             !GameState.instance().hasLight())
             return "The room is dark and you are unable to see anything to take.";
@@ -17,9 +19,11 @@ class TakeCommand extends Command {
         overburdened = "Sorry, you are overburdened with weight";
         try {
             Room currentRoom = GameState.instance().getAdventurersCurrentRoom();
-            if (GameState.instance().checkWeight())
+            Item theItem = currentRoom.getItemNamed(itemName);
+            int predictedWeight = theItem.getWeight() + GameState.instance().getWeight();
+            if ((GameState.instance().checkWeight()) && (predictedWeight<MAXWEIGHT))
             {
-                Item theItem = currentRoom.getItemNamed(itemName);
+
                 GameState.instance().addToInventory(theItem);
                 currentRoom.remove(theItem);
                 theItem.updateInventory();

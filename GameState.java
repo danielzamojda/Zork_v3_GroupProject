@@ -420,6 +420,12 @@ public class GameState {
         return x.toString();
     }
 
+    public int getWeight()
+    {
+        return this.currentWeight;
+    }
+
+
     /**
      * Method that will check the current weight of inventory is lower than MAX_WEIGHT
      *
