@@ -9,16 +9,14 @@ Features:
 2. Weight Limit
 	- Limit on inventory weight
 	- Will not allow an adventurer to pick up items when over encumbered
-	- Current weight limit is set to 75% of the total item weights of the dungeon
-	- To test item weight, start in rotunda and enter 'd' to go to Basemend Hallway and pick up the DrPepper and Key there.
-	enter 's' to go into B13 and take the bomb. Talk to the wizard by typing 'Get me out of here' for him to teleport you to
-	a random room. At this point you have the heaviest item in the dungeon. Find your way to B6 and take the torch. Go 'u' to
-	Rotunda Balcony and take the chainsaw. At this point you will not be able to take the magicWand. 
-	
 	
 3. Dark and Locked rooms
 	- Locked rooms will only allow an adventurer to enter while equiped with
 	a specific item in their inventory
-	- Dark rooms may be entered but must be exited the way they came from
+	- Dark rooms may be entered but must be exited the way they came from if
+	the dungeoneer doesn't have a light source.
+	- If a member drops a lightsource, the file will search for any other item
+	in your inventory that is a light source. If you don't have one, you'll no
+	longer be able to see in dark rooms.
 	- Only specific items have the ability to lock and or lighten rooms
 	
