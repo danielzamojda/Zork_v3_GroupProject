@@ -415,8 +415,9 @@ public class GameState {
      *
      * @return String message regarding adventurer rank
      */
-    public int getInventoryWeight() {
-        return this.currentWeight;
+    public String getInventoryWeight() {
+        Integer x = this.currentWeight;
+        return x.toString();
     }
 
     /**

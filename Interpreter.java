@@ -56,8 +56,10 @@ public class Interpreter {
         }
     }
 
-    private static String promptUser(Scanner commandLine) {
+    private static String promptUser(Scanner commandLine)
+    {
 
+        state.checkWeight();
         state.checkHealth();
         state.checkScore();
         System.out.print("> ");

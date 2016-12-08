@@ -45,6 +45,9 @@ public class CommandFactory {
         if (verb.equals("score")) {
             return new ScoreCommand();
         }
+        if (verb.equals("weight")) {
+            return new WeightCommand();
+        }
         return new UnknownCommand(command);
     }
 }

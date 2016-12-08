@@ -158,6 +158,7 @@ public class Item {
     {
         GameState.instance().setWeight(weight);
     }
+    public void dropFromInvetory() { GameState.instance().setWeight(weight*(-1));}
 
     public String[] getEventsForVerb(String verb) { return events.get(verb); }
     public boolean isLightSource(){return lightSource;}

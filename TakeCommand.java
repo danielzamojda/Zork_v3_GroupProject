@@ -16,8 +16,7 @@ class TakeCommand extends Command {
         }
         overburdened = "Sorry, you are overburdened with weight";
         try {
-            Room currentRoom =
-                    GameState.instance().getAdventurersCurrentRoom();
+            Room currentRoom = GameState.instance().getAdventurersCurrentRoom();
             if (GameState.instance().checkWeight())
             {
                 Item theItem = currentRoom.getItemNamed(itemName);
