@@ -5,6 +5,9 @@ Features:
 	- NPC's may also trigger events
 	- Adventurer is able to trade items with NPC's
 	- Certain inputed messages trigger specific NPC outputs
+	- The two NPC's are located in the rooms B13 and B6
+	To test the NPC's and their functions, first enter the room. The NPC will give you a greeting when entering for the first time.
+	Any subsequent time the NPC will not give you the welcome message. The NPC ProfessorZeitz will output 'Hello! I'm Professor Zeitz.' where as MagicHealer will output 'Hello! I'm a wizard. What can I do for ya?'. NPC's are able to give you items. They will only give you items but not receive them. To trade with the MagicHealer, type 'I don't feel too hot' to receive a magic potion. This will also heal you. By typing 'Get me out of here' the magicHealer will teleport you outside of B13, which does not have any exits allowing you to leave. Go to room B6 to find ProfessorZeitz.  She will accept three separate inputs, 'Can I have an A+?', 'I'm skipping class today','I cheated on a test'. The first input will trigger the Win event and will output 'Here ya go. You Win!'. The second input will trigger the Wound event and will -5 from health while outputting 'Skipping class is bad for your future! *SLAP*'. The final input will trigger the die event and losing the game while outputting 'Honor code violation!'.
 	
 2. Weight Limit
 	- Limit on inventory weight
@@ -23,4 +26,9 @@ Features:
 	a specific item in their inventory
 	- Dark rooms may be entered but must be exited the way they came from
 	- Only specific items have the ability to lock and or lighten rooms
+	- Dark rooms may be entered but must be exited the way they came from if
+	the dungeoneer doesn't have a light source.
+	- If a member drops a lightsource, the file will search for any other item
+	in your inventory that is a light source. If you don't have one, you'll no
+	longer be able to see in dark rooms.
 	
